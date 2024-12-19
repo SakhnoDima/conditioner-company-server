@@ -1,14 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
-import tasksRoutes from './routes/tasks.js';
-import popularityRoutes from './routes/popularity.js';
+import popularityRoutes from './routes/updatePopularity.js';
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 const corsOptions = {
     origin: 'https://topwomen.careers',
@@ -19,7 +17,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.use('/init-task', tasksRoutes);
 app.use('/v1', popularityRoutes);
 
 app.listen(PORT, () => {
