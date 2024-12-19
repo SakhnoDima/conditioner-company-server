@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 const corsOptions = {
-    origin: 'https://topwomen.careers',
+    origin: 'https://klimaanlagenfinder.webflow.io',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Authorization',
 };
