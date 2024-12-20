@@ -1,5 +1,6 @@
 import cron from "node-cron";
 import dotenv from "dotenv";
+import { getLocations } from "../controllers/getLocations.js";
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ class TaskSchedulerService {
 
   async runTasksSequentially() {
     console.log("Тут виконується функція");
-    // Реалізуйте логіку виконання завдань
+    await getLocations();
   }
 
   startCron() {
