@@ -7,7 +7,7 @@ import tasksRoutes from "./routes/tasks.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 const corsOptions = {
   origin: "https://topwomen.careers",
