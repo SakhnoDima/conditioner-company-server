@@ -1,6 +1,7 @@
 import cron from "node-cron";
 import dotenv from "dotenv";
-import { getLocations } from "../controllers/getLocations.js";
+
+import { createWebflowPost } from "../controllers/createPost.js";
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ class TaskSchedulerService {
 
   async runTasksSequentially() {
     console.log("Тут виконується функція");
-    await getLocations();
+    await createWebflowPost();
   }
 
   startCron() {
